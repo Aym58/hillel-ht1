@@ -85,7 +85,7 @@ class App extends Component {
 		const arr = [...this.state.data];
 		const newPostObj = {};
 		newPostObj.userId = this.state.inputUser;
-		newPostObj.id = this.state.data.length + 1;
+		newPostObj.id = arr[arr.length - 1].id + 1;
 		newPostObj.title = this.state.inputHeader;
 		newPostObj.body = this.state.inputText;
 		arr.push(newPostObj);
