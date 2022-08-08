@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/hillel-ht1/static/css/main.dec1ab8d.css",
+    "main.css": "/hillel-ht1/static/css/main.5e9f16ef.css",
     "main.js": "/hillel-ht1/static/js/main.345de8be.js",
     "index.html": "/hillel-ht1/index.html",
-    "main.dec1ab8d.css.map": "/hillel-ht1/static/css/main.dec1ab8d.css.map",
+    "main.5e9f16ef.css.map": "/hillel-ht1/static/css/main.5e9f16ef.css.map",
     "main.345de8be.js.map": "/hillel-ht1/static/js/main.345de8be.js.map"
   },
   "entrypoints": [
-    "static/css/main.dec1ab8d.css",
+    "static/css/main.5e9f16ef.css",
     "static/js/main.345de8be.js"
   ]
 }
