@@ -2,7 +2,7 @@
 	"name": "homework_2_lesson",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://aym58.github.io",
+	"homepage": "https://aym58.github.io/hillel-ht1",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/react": "^13.3.0",

@@ -33,6 +33,7 @@ code {
 button {
 	cursor: pointer;
 	background-color: #c6e2ff;
+	color: rgb(12, 12, 12);
 	border: none;
 	padding: 5px;
 	border-radius: 5px;
@@ -120,10 +121,10 @@ button {
 }
 
 .add-new-post button {
-	height: 100px;
-	width: 100px;
-	border-radius: 50px;
+	height: 90px;
+	width: 90px;
+	border-radius: 45px;
 	background-color: #99ccff;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: bold;
 }
