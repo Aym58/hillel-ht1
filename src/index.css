@@ -1,13 +1,129 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	background-color: #eeeeee;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+textarea,
+input {
+	padding: 10px;
+	margin: 5px 0;
+	font-size: 14px;
+}
+
+h1 {
+	font-size: 16px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+button {
+	cursor: pointer;
+	background-color: #c6e2ff;
+	border: none;
+	padding: 5px;
+	border-radius: 5px;
+}
+.wrapper {
+	margin: 20px 20px 100px 20px;
+}
+
+.post-block {
+	text-align: justify;
+	margin: 5px 0px;
+	padding: 10px 10px;
+	background-color: #c6e2ff;
+}
+
+.post-content {
+	margin: 10px 10px 0px 10px;
+}
+
+.post-top-bar {
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+}
+
+.post-menu {
+	display: flex;
+	gap: 20px;
+	justify-content: flex-end;
+}
+
+.post-info {
+	display: flex;
+	gap: 20px;
+	justify-content: flex-start;
+}
+
+.post-menu span {
+	font-style: italic;
+}
+
+.input-message {
+	width: 100%;
+	margin: 20px 0px;
+}
+
+.add-post {
+	box-sizing: content-box;
+	width: 100%;
+	margin: 20px 0px;
+}
+
+.input-title {
+	width: 100%;
+}
+
+.input-text {
+	width: inherit;
+	min-height: 100px;
+}
+
+.submit-btn {
+	padding: 10px 10px;
+	width: 160px;
+}
+
+.change-wrapper {
+	display: block;
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: #ffffff;
+	top: 100px;
+	width: 80%;
+	padding: 20px;
+}
+
+.add-new-post {
+	display: block;
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%, 0);
+	bottom: 50px;
+	justify-content: center;
+}
+
+.add-new-post button {
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+	background-color: #99ccff;
+	font-size: 18px;
+	font-weight: bold;
 }
