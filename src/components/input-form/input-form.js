@@ -31,8 +31,8 @@ class InputForm extends Component {
 					<div className='add-message'>
 						<button
 							className='submit-btn'
-							onClick={(e) => {
-								e.preventDefault();
+							onClick={(event) => {
+								event.preventDefault();
 								if (this.props.action === 'change') {
 									this.props.changePost();
 								}

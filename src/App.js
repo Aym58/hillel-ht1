@@ -35,13 +35,10 @@ class App extends Component {
 
 	deletePost = async (id) => {
 		try {
-			const arr = [...this.state.data];
-			await api.deleteData(this.getArrId(id));
-			arr.splice(this.getArrId(id), 1);
-			this.setState(() => {
-				return {
-					data: arr,
-				};
+			const deleteId = this.getArrId(id);
+			await api.deleteData(deleteId);
+			this.setState({
+				data: this.state.data.filter((el, i) => i !== deleteId),
 			});
 		} catch (err) {
 			console.error('Error: ' + err.message);
@@ -50,15 +47,16 @@ class App extends Component {
 
 	changePost = async () => {
 		try {
+			const chandeId = this.state.inputId;
 			const changedPostArr = [...this.state.data];
-			changedPostArr[this.state.inputId] = {
-				...changedPostArr[this.state.inputId],
+			changedPostArr[chandeId] = {
+				...changedPostArr[chandeId],
 				userId: this.state.inputUser,
 				title: this.state.inputHeader,
 				body: this.state.inputText,
 			};
 
-			await api.changeData(this.state.data[this.state.inputId]);
+			await api.changeData(changedPostArr[chandeId]);
 			this.setState(() => {
 				return {
 					data: changedPostArr,
@@ -77,20 +75,17 @@ class App extends Component {
 
 	addPost = async () => {
 		try {
-			const newPostArr = [...this.state.data];
-
 			const newPostObj = {
 				userId: this.state.inputUser,
-				id: newPostArr[newPostArr.length - 1].id + 1,
+				id: this.state.data[this.state.data.length - 1].id + 1,
 				title: this.state.inputHeader,
 				body: this.state.inputText,
 			};
 
-			newPostArr.push(newPostObj);
 			await api.postData(newPostObj);
 			this.setState(() => {
 				return {
-					data: newPostArr,
+					data: [...this.state.data, newPostObj],
 					showChangePostWrapper: false,
 					inputUser: '',
 					inputHeader: '',
@@ -115,14 +110,14 @@ class App extends Component {
 		});
 	};
 
-	showChangePostForm = (el) => {
+	showChangePostForm = (element) => {
 		this.setState(() => {
 			return {
 				showChangePostWrapper: true,
-				inputId: this.getArrId(el.id),
-				inputUser: el.userId,
-				inputHeader: el.title,
-				inputText: el.body,
+				inputId: this.getArrId(element.id),
+				inputUser: element.userId,
+				inputHeader: element.title,
+				inputText: element.body,
 				action: 'change',
 			};
 		});
